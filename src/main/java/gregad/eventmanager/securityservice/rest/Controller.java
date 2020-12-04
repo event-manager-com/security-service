@@ -29,7 +29,6 @@ public class Controller {
     @PostMapping(value = GENERATE)
     public Token generateToken(@RequestBody NamePassword namePassword){
         String token = securityService.generateToken(namePassword.getName(), namePassword.getPassword());
-        System.out.println(PREFIX+token);
         return new Token(PREFIX+token);
     }
 }
