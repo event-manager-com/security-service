@@ -14,7 +14,7 @@ import java.util.Date;
 import static gregad.eventmanager.securityservice.api.ApiConstants.PREFIX;
 
 @Component
-@RefreshScope
+
 public class JwtTokenProvider {
     @Value("${jwt.token.secret}")
     private String secret;

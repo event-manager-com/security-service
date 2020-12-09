@@ -1,5 +1,6 @@
 package gregad.eventmanager.securityservice.users;
 
+import gregad.event_manager.loggerstarter.aspect.DoLogging;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;

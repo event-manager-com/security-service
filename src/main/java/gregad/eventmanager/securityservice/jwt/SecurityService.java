@@ -1,5 +1,6 @@
 package gregad.eventmanager.securityservice.jwt;
 
+import gregad.event_manager.loggerstarter.aspect.DoLogging;
 import gregad.eventmanager.securityservice.users.User;
 import gregad.eventmanager.securityservice.users.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
  * @author Greg Adler
  */
 @Service
+@DoLogging
 public class SecurityService {
     @Autowired
     private JwtTokenProvider tokenProvider;
