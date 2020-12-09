@@ -1,10 +1,10 @@
 package gregad.eventmanager.securityservice.users;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,13 +12,11 @@ import java.util.List;
  */
 @Component
 public class UserService {
+
+    @Autowired
     private List<User>users;
 
     public UserService() {
-        users = new ArrayList<>();
-        users.add(new User("user-service","KDlewe*889Km)k,kfl+cseE+-9kk,k44rf.dJDjjjd?kJ"));
-        users.add(new User("user-event-service","k0(kdDWW:pkW#jcskl:<DMKN!l568%$tgH-j,m"));
-        users.add(new User("router-service","lbjto^h8k)nk+csS=asFEoe$hjsep=j+mMKk"));
     }
 
     public User getUser(String name, String password){

@@ -1,6 +1,5 @@
 package gregad.eventmanager.securityservice.jwt;
 
-import gregad.eventmanager.securityservice.jwt.JwtTokenProvider;
 import gregad.eventmanager.securityservice.users.User;
 import gregad.eventmanager.securityservice.users.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ public class SecurityService {
     }
     
     public String generateToken(String name,String password){
-       // User user = userService.getUser(name, password);
+        User user = userService.getUser(name, password);
         String token = tokenProvider.createToken(name, password);
         //user.setToken(token);
         return token;

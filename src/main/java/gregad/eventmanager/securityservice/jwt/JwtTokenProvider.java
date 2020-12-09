@@ -2,9 +2,8 @@ package gregad.eventmanager.securityservice.jwt;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -15,6 +14,7 @@ import java.util.Date;
 import static gregad.eventmanager.securityservice.api.ApiConstants.PREFIX;
 
 @Component
+@RefreshScope
 public class JwtTokenProvider {
     @Value("${jwt.token.secret}")
     private String secret;
